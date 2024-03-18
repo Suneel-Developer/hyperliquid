@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(15, 26, 31);
+  color: rgb(246, 254, 253);
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 2px;
+  background: rgb(48, 48, 48);
+  border: none;
+  outline: none;
+  --track-color: rgba(0, 0, 0, 0.2);
+  --clip-edges: 1em;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: red;
+}
+input[type="range"]::-webkit-progress-value {
+  background-color: red;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #3f3737;
+  border: 2px solid rgb(71, 71, 71);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  border-radius: 50%;
+  border: 1px solid rgb(80, 210, 193);
+  box-shadow: 1px 1px 10px 4px rgb(80 210 193);
+  opacity: 0.9;
+    transition: all 0.2s ease-in-out 0s;
+}
